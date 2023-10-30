@@ -1,30 +1,32 @@
 // eslint-disable-next-line no-unused-vars
-function shortTwenty(line){
-  line = 'Меньше 20 символов';
-  if(line.length < 20){
+function shortTwenty(line, count) {
+  if (line.length < count) {
     return true;
   }
   return false;
 }
 // eslint-disable-next-line no-unused-vars
-function exactlyEighteen(line){
-  line = 'Здесь 18 символов!';
+const x = shortTwenty('Меньше 20 символов', 20);
+// eslint-disable-next-line no-unused-vars
+function exactlyEighteen(line, count){
   if(line.length === 18){
     return true;
   }
   return false;
 }
 // eslint-disable-next-line no-unused-vars
-function longerTen(line){
-  line = 'Не 10';
+const y = exactlyEighteen('Здесь 18 символов!',18);
+// eslint-disable-next-line no-unused-vars
+function longerTen(line, count){
   if(line.length > 10){
     return true;
   }
   return false;
 }
 // eslint-disable-next-line no-unused-vars
+const z = longerTen('Не 10', 10);
+// eslint-disable-next-line no-unused-vars
 function stomp(palindrome){
-  palindrome = 'топот';
   const one = palindrome.toLowerCase();
   let j = '';
   for(let i = palindrome.length - 1; i >= 0; i--){
@@ -35,9 +37,10 @@ function stomp(palindrome){
   }
   return false;
 }
+// eslint-disable-next-line no-unused-vars
+const w = stomp('топот');
 // eslint-disable-next-line no-unused-vars
 function argument(palindrome){
-  palindrome = 'ДовОд';
   const one = palindrome.toLowerCase();
   let j = '';
   for(let i = palindrome.length - 1; i >= 0; i--){
@@ -49,8 +52,10 @@ function argument(palindrome){
   return false;
 }
 // eslint-disable-next-line no-unused-vars
+const v = argument('ДовОд');
+// eslint-disable-next-line no-unused-vars
 function cat(palindrome){
-  palindrome = 'Кекс';
+
   const one = palindrome.toLowerCase();
   let j = '';
   for(let i = palindrome.length - 1; i >= 0; i--){
@@ -61,3 +66,5 @@ function cat(palindrome){
   }
   return false;
 }
+// eslint-disable-next-line no-unused-vars
+const u = cat('Кекс');
